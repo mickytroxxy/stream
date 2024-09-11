@@ -26,6 +26,9 @@ app.post("/streamRegister", async(req,res) =>{
     return res.status(200).json({ token, phoneNumber });
   } catch (error) {}
 });
+app.get("/", async(req,res) =>{
+  res.send('App is running')
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port} (HTTP)...`);
